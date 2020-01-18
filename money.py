@@ -44,9 +44,9 @@ def send_money(amount):
     }
 
     transfer = app_token.post('transfers', request_body)
-    pprint(transfer.headers)
+    return transfer.headers
 
 
 if __name__ == "__main__":
     amount = input("How much to send? >")
-    send_money(amount)
+    pprint(send_money(amount))
