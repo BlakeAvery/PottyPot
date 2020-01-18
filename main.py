@@ -16,7 +16,7 @@ def main():
         print("-"*25)
         print("Start recording?")
         user_response = input("[y]/n> ")
-        if user_response.lower() != "y" or user_response:
+        if user_response.lower() != "y" or not user_response:
             print("Invalid response")
             break
 
