@@ -2,3 +2,4 @@ venv/
 .idea/
 secrets.txt
 file.wav
+tester.py
