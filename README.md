@@ -1,7 +1,6 @@
-# PottyPot
+# PottyPot: The Automatic Swear Jar
 
-If you say the bad word you give us a tenner
+PottyPot is a program that detects when you swear and transfers money out of your account.
+See us on [DevPost]()!
 
-That's all there is to it pal
-
-Runs better on linux cause windows is evil :)
+Works best on Linux :)
