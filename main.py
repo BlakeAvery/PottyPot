@@ -12,18 +12,26 @@ def main():
 
     print("Welcome to PottyPot!")
     while True:
-
         print("-"*25)
         print("Start recording?")
         user_response = input("[y]/n> ")
         if user_response.lower() != "y" or not user_response:
             print("Invalid response")
             break
-
+        
         file = record_audio(5)
         words = speech_detect(file)
 
-        user_swears = [swear for swear in SWEARS if swear in '\n'.join(words)]
+        user_swears = []
+
+        for i in words:
+            print(i)
+            indiv = i.split(' ')
+            for j in indiv:
+                for k in SWEARS:
+                    if k == j:
+                        user_swears.append(k)
+
         if user_swears:
             print(f"Uh oh, you said {' '.join(user_swears)}!")
 

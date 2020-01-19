@@ -50,7 +50,7 @@ def speech_detect(filename):
 
     # We take the speech from record_audio() and shit it into google cloud.
 
-    print(f"Openening wav file: {filename}")
+    print(f"Opening wav file: {filename}")
     file_path = os.path.join(
         os.path.dirname(__file__),
         filename)
@@ -66,8 +66,9 @@ def speech_detect(filename):
 
     print(f"Sending {file_path} to Google...")
     response = client.recognize(config, audio)
-    results = list()
+    results = []
     for result in response.results:
-        results.append(result)
-        print(f"Transcript: {result.alternatives[0].transcript}")
+        results.append(result.alternatives[0].transcript)
+        print(results[0])
+        #print(f"Transcript: {result.alternatives[0].transcript}")
     return results
